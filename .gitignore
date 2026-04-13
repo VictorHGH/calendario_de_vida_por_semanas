@@ -1,0 +1,20 @@
+# OS artifacts
+.DS_Store
+Thumbs.db
+
+# Editor and IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+
+# Local tool settings
+opencode.json
+
+# Generated exports
+Calendario de vida por semanas.pdf

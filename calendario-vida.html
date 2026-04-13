@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Calendario de vida por semanas</title>
+		<link rel="stylesheet" href="./styles.css" />
+	</head>
+
+	<body>
+		<main class="sheet">
+			<h1>Calendario de vida por semanas</h1>
+
+			<section class="intro screen-only" aria-label="Cómo funciona este calendario">
+				<h2>Objetivo principal</h2>
+				<p class="intro-objective">
+					El objetivo es imprimir este calendario para llevar un conteo semanal visual y personal de las
+					semanas que has vivido desde tu nacimiento hasta la edad final que elijas (máximo 100 años).
+					Se recomienda una impresión en
+					60 x 90 cm (vertical) para una mejor presentación.
+				</p>
+				<p class="intro-note">Concepto base inspirado en el póster de life calendar de Kurzgesagt.</p>
+				<h3>Cómo usarlo:</h3>
+				<ol>
+					<li>Ingresa tu fecha de nacimiento y una edad final entre 1 y 100 años. El sistema calcula cuántas
+						semanas ya has vivido y cuántas faltan hasta esa edad.</li>
+					<li>La tabla se genera en semanas: cada fila es un año de vida y cada punto es una semana.</li>
+					<li>La columna "Edad" muestra años cumplidos al inicio de cada año de vida: la fila 0 es de 0 a 1
+						año; la última fila corresponde al tramo previo a la edad final.</li>
+					<li>Rojo = vividas, blanco = por vivir, gris = sobrantes; el cálculo anual usa aniversarios reales
+						a partir de tu cumpleaños (52 o 53 semanas dependiendo del año).</li>
+					<li>El siguiente punto se pinta cada 7 días desde tu fecha de nacimiento, no por semana de
+						calendario. El sistema te indica el día de la semana en la sección "Seguimiento semanal".</li>
+				</ol>
+			</section>
+
+			<form class="toolbar" id="calendarForm">
+				<div class="field-group">
+					<label class="field-label" for="dobInput">Fecha de nacimiento (dd/mm/yyyy):</label>
+					<input id="dobInput" type="text" inputmode="numeric" placeholder="dd/mm/yyyy"
+						pattern="\d{1,2}/\d{1,2}/\d{4}" title="Usa el formato dd/mm/yyyy" autocomplete="bday"
+						required />
+				</div>
+
+				<div class="field-group">
+					<label class="field-label" for="ageInput">Edad final:</label>
+					<input id="ageInput" type="number" min="1" max="100" step="1" required />
+				</div>
+
+				<button type="submit">Actualizar</button>
+				<button type="button" id="printBtn">Imprimir / Guardar PDF</button>
+			</form>
+
+			<div class="weekly-guide screen-only is-empty" id="weeklyGuide" aria-live="polite">
+				<strong>Seguimiento semanal</strong>
+				<p id="weeklyGuideText">Ingresa tu fecha de nacimiento y edad final (1-100) para ver qué día te toca
+					pintar los puntos.</p>
+			</div>
+
+			<p class="meta" id="meta"></p>
+
+			<div class="legend">
+				<span class="chip"><span class="dot lived"></span> Semana vivida</span>
+				<span class="chip"><span class="dot future"></span> Semana por vivir</span>
+				<span class="chip"><span class="dot extra"></span> Celda sobrante</span>
+			</div>
+
+			<div class="table-wrap">
+				<div class="table-frame">
+					<table id="lifeTable"></table>
+				</div>
+			</div>
+
+		</main>
+
+		<footer class="site-footer">
+			<p class="attribution">Calendario de vida semanal - versión personal para seguimiento e impresión.</p>
+		</footer>
+
+		<script src="./app.js"></script>
+	</body>
+
+</html>
