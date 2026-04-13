@@ -42,10 +42,6 @@ Aplicación web estática para visualizar una vida en semanas, con una fila por 
 - Evitar frameworks o build tools salvo solicitud explícita.
 - Preservar compatibilidad con apertura directa en navegador.
 
-## Atribución
+## Nota
 
-La idea base del concepto de life calendar está inspirada en el póster de Kurzgesagt:
-
-https://shop-us.kurzgesagt.org/products/lifespan-calendar-poster-black-white?variant=40572569288752
-
-El crédito conceptual de esa idea corresponde a Kurzgesagt. Esta implementación es una variación personal para uso propio.
+Calendario de vida semanal - versión personal para seguimiento e impresión.
