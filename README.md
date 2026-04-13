@@ -13,7 +13,7 @@ Aplicación web estática para visualizar una vida en semanas, con una fila por 
 
 ## Estructura del proyecto
 
-- `calendario-vida.html`: estructura de la página.
+- `index.html`: estructura de la página.
 - `styles.css`: estilos de pantalla e impresión.
 - `app.js`: lógica de cálculo y renderizado.
 - `AGENTS.md`: lineamientos de mantenimiento del proyecto.
@@ -25,7 +25,7 @@ Aplicación web estática para visualizar una vida en semanas, con una fila por 
 
 ## Uso rápido
 
-1. Abre `calendario-vida.html` directamente en el navegador.
+1. Abre `index.html` directamente en el navegador.
 2. Ingresa la fecha de nacimiento (`dd/mm/yyyy`) y la edad final.
 3. Pulsa `Actualizar` para regenerar la tabla.
 4. Pulsa `Imprimir / Guardar PDF` para exportar.

@@ -14,7 +14,7 @@ Este proyecto es una pagina estatica para visualizar un calendario de vida por s
 ## Reglas de mantenimiento
 
 1. Mantener separacion clara:
-   - HTML: estructura (`calendario-vida.html`)
+   - HTML: estructura (`index.html`)
    - CSS: estilos (`styles.css`)
    - JS: logica (`app.js`)
 2. No introducir frameworks ni build tools salvo solicitud explicita.
@@ -25,7 +25,7 @@ Este proyecto es una pagina estatica para visualizar un calendario de vida por s
 
 ## Validacion rapida antes de cerrar cambios
 
-- Abrir `calendario-vida.html`.
+- Abrir `index.html`.
 - Verificar que cambiar fecha/edad regenere la tabla.
 - Verificar que el conteo de anos con 52 y 53 se muestre en metadata.
 - Verificar que impresion siga centrada y legible.
