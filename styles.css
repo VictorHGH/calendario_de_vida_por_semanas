@@ -283,6 +283,78 @@ th.age {
 	padding-bottom: 2px;
 }
 
+@media screen and (max-width: 640px) {
+	body {
+		margin: 12px;
+	}
+
+	h1 {
+		font-size: 21px;
+	}
+
+	.intro {
+		padding: 10px 12px;
+	}
+
+	.toolbar {
+		gap: 10px;
+	}
+
+	.field-group,
+	input,
+	button {
+		width: 100%;
+	}
+
+	.meta .meta-item {
+		display: block;
+	}
+
+	.meta .meta-item+.meta-item::before {
+		content: "";
+	}
+
+	.legend {
+		gap: 8px 12px;
+	}
+
+	.table-wrap {
+		max-width: calc(100vw - 24px);
+		-webkit-overflow-scrolling: touch;
+	}
+
+	.table-frame {
+		display: inline-block;
+		margin: 0;
+		padding: 4px;
+		border-radius: 8px;
+	}
+
+	table {
+		font-size: 8px;
+		padding: 4px;
+		border-radius: 5px;
+	}
+
+	th,
+	td {
+		min-width: 10px;
+		width: 10px;
+		height: 10px;
+		padding: 0 1px;
+	}
+
+	td .dot {
+		width: 5px;
+		height: 5px;
+	}
+
+	th.age {
+		min-width: 26px;
+		width: 26px;
+	}
+}
+
 @page {
 	size: 60cm 90cm;
 }
